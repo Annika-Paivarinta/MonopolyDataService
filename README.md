@@ -1,2 +1,2 @@
 # MonopolyDataService
-service repo for monopoly sql
+- service repo for monopoly sql
