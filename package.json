@@ -1,10 +1,11 @@
 {
   "name": "monopolydataservice",
   "version": "1.0.0",
-  "description": "This is the data service application for the CS 262 Monopoly project, which is deployed here: https://monopolyweb-fya4bjavedfab5gw.centralus-01.azurewebsites.net/",
-  "main": "monopolyDirect.js",
+  "description": "ap43 webservice",
+  "main": "monopolyService.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node monopolyService.js",
+    "start-direct": "node monopolyDirect.js"
   },
   "keywords": [],
   "author": "",
