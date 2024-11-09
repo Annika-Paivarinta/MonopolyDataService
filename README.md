@@ -4,7 +4,7 @@ https://monopolyweb-fya4bjavedfab5gw.centralus-01.azurewebsites.net/
 
 It has the following read data route URLs:
 
-/ a hello message
+/ an intro message
 /players a list of players
 /players/:id a single player with the given ID
 It is based on the standard Azure App Service tutorial for Node.js.
