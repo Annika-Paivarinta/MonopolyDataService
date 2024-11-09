@@ -1,0 +1,16 @@
+{
+  "name": "monopolydataservice",
+  "version": "1.0.0",
+  "description": "This is the data service application for the CS 262 Monopoly project, which is deployed here: https://monopolyweb-fya4bjavedfab5gw.centralus-01.azurewebsites.net/",
+  "main": "monopolyDirect.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.1",
+    "pg": "^8.13.1"
+  }
+}
