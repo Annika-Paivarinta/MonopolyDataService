@@ -3,15 +3,17 @@
   "version": "1.0.0",
   "description": "ap43 webservice",
   "main": "monopolyService.js",
+  "author": "ap43",
+  "license": "ISC",
+  "engine": {
+    "node": ">=14.0.0"
+  },
   "scripts": {
     "start": "node monopolyService.js",
     "start-direct": "node monopolyDirect.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "express": "^4.21.1",
-    "pg": "^8.13.1"
+    "pg-promise": "^10.12.1"
   }
 }
