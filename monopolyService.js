@@ -69,7 +69,13 @@ function readHelloMessage(req, res) {
 }
 
 function readPlayerScores(req, res, next) {
-  db.oneOrNone('SELECT PlayerGame.score, Player.name FROM Player, PlayerGame WHERE Player.ID = PlayerGame.playerID, id=${id}', req.params)
+    db.many(
+      `SELECT PlayerGame.score, Player.name, Player.emailAddress 
+       FROM Player 
+       JOIN PlayerGame ON Player.ID = PlayerGame.playerID 
+       WHERE Player.ID = $1`,
+      [req.params.id] // Using positional parameter for security
+    )
     .then((data) => {
       res.send(data);
     })
