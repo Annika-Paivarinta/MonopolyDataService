@@ -49,7 +49,7 @@ router.put('/players/:id', updatePlayer);
 router.post('/players', createPlayer);
 router.delete('/players/:id', deletePlayer);
 
-router.get('/score/:id', readPlayerGames);
+router.get('/scores/:id', readPlayerScores);
 
 app.use(router);
 app.listen(port, () => console.log(`Listening on port ${port}`));
@@ -68,8 +68,8 @@ function readHelloMessage(req, res) {
   res.send('Hello, this is ap43s Monopoly service! I hope this works...');
 }
 
-function readPlayerGames(req, res, next) {
-  db.many('SELECT score FROM Player, PlayerGame WHERE Player.ID = PlayerGame.playerID AND Player.name =${body.name}')
+function readPlayerScores(req, res, next) {
+  db.many('SELECT score FROM Player, PlayerGame WHERE Player.ID = PlayerGame.playerID AND Player.name =${name}')
     .then((data) => {
       res.send(data);
     })
