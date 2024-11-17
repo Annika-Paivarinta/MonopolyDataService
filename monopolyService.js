@@ -73,7 +73,7 @@ function readPlayerScores(req, res, next) {
       `SELECT Player.score 
        FROM Player 
        JOIN PlayerGame ON Player.ID = PlayerGame.playerID 
-       WHERE Player.ID = ${id}`,
+       WHERE Player.id = ${id}`,
       { id: req.params.id } // Use the `id` parameter from the route
     )
     .then((data) => {
