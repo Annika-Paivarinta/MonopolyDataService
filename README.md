@@ -14,7 +14,7 @@ https://monopolyweb-fya4bjavedfab5gw.centralus-01.azurewebsites.net/players
 https://monopolyweb-fya4bjavedfab5gw.centralus-01.azurewebsites.net/players/1   
 
 /score/:name      lists the scores that that player has gotten in all their games
-https://monopolyweb-fya4bjavedfab5gw.centralus-01.azurewebsites.net/scores/Dogbreath
+https://monopolyweb-fya4bjavedfab5gw.centralus-01.azurewebsites.net/score/Dogbreath
 
 (not found)
 https://monopolyweb-fya4bjavedfab5gw.centralus-01.azurewebsites.net/-1      
