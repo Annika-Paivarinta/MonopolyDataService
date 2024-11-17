@@ -69,12 +69,13 @@ function readHelloMessage(req, res) {
 }
 
 function readPlayerScores(req, res, next) {
+  function readPlayerScores(req, res, next) {
     db.many(
-      `SELECT Player.score 
+      `SELECT PlayerGame.score, Player.name, Player.emailAddress 
        FROM Player 
        JOIN PlayerGame ON Player.ID = PlayerGame.playerID 
-       WHERE Player.id = ${id}`,
-      { id: req.params.id } // Use the `id` parameter from the route
+       WHERE Player.ID = $1`,
+      [req.params.id] // Using positional parameter for security
     )
     .then((data) => {
       res.send(data);
