@@ -49,7 +49,7 @@ router.put('/players/:id', updatePlayer);
 router.post('/players', createPlayer);
 router.delete('/players/:id', deletePlayer);
 
-router.get('/score/:name', readPlayerGames);
+router.get('/score/:id', readPlayerGames);
 
 app.use(router);
 app.listen(port, () => console.log(`Listening on port ${port}`));
@@ -69,7 +69,7 @@ function readHelloMessage(req, res) {
 }
 
 function readPlayerGames(req, res, next) {
-  db.many('SELECT score FROM Player, PlayerGame WHERE Player.ID = PlayerGame.playerID AND Player.name =${name}')
+  db.many('SELECT score FROM Player, PlayerGame WHERE Player.ID = PlayerGame.playerID AND Player.name =${body.name}')
     .then((data) => {
       res.send(data);
     })
