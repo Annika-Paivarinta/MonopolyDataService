@@ -69,7 +69,6 @@ function readHelloMessage(req, res) {
 }
 
 function readPlayerScores(req, res, next) {
-  function readPlayerScores(req, res, next) {
     db.many(
       `SELECT PlayerGame.score, Player.name, Player.emailAddress 
        FROM Player 
