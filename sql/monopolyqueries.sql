@@ -19,3 +19,6 @@
     -- When you want to compare two different aspects of the same table, such as comparing the scores of two different players in the same game
 
     
+
+-- 11/16/2024: join table
+-- SELECT score FROM Player, PlayerGame WHERE Player.ID = PlayerGame.playerID AND Player.name = "Player1";
